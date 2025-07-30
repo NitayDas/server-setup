@@ -51,7 +51,7 @@ sudo systemctl restart gunicorn
 
 # open the nginx file
 ```
-sudo nano /etc/nginx/sites-available/default.conf
+sudo nano /etc/nginx/conf.d/natunhat.conf
 ```
 
 ```
