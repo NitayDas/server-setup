@@ -118,3 +118,11 @@ sudo systemctl status nginx
 ```
 
 
+# bind with ssl
+```
+sudo certbot --nginx -d npcj.edu.bd -d www.npcj.edu.bd
+```
+
+
+
+
