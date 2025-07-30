@@ -27,10 +27,10 @@ After=network.target
 [Service]
 User=root
 Group=www-data
-WorkingDirectory=/home/project-folder/college_backend
+WorkingDirectory=/home/project_folder/college_backend
 ExecStart=/home/college_venv/bin/gunicorn \
-  --env DJANGO_SETTINGS_MODULE=project-name.settings \
-  --workers 3 --bind 127.0.0.1:8000 project-name.wsgi:application
+  --env DJANGO_SETTINGS_MODULE=abdulgafur_backend.settings \
+  --workers 3 --bind 127.0.0.1:8001 abdulgafur_backend.wsgi:application
 
 
 [Install]
