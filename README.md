@@ -99,3 +99,22 @@ server {
 
 }
 ```
+
+# log of nginx
+```
+nginx -t
+```
+
+# start,enable,restart nginx
+```
+sudo systemctl start nginx
+sudo systemctl enable nginx
+sudo systemctl restart nginx
+```
+
+# status of nginx
+```
+sudo systemctl status nginx
+```
+
+
