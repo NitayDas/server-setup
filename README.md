@@ -1,19 +1,19 @@
 # server-setup
 
 
-## Gunicorn Setup
+# Gunicorn Setup
 
-# Insatll gunicorn
+## 1.Insatll gunicorn
 ```
 pip install gunicorn
 ```
 
-# BInd with project
+## 2.BInd with project
 ```
 gunicorn mysite.wsgi:application --bind 0.0.0.0:8000
 ```
 
-# Open the gunicorn file
+# 3.Open the gunicorn file
 
 ```
 sudo nano /etc/systemd/system/gunicorn.service
@@ -38,7 +38,7 @@ WantedBy=multi-user.target
 ```
 
 
-# start, enable and restart the gunicorn
+# 4.start, enable and restart the gunicorn
 ```
 sudo systemctl daemon-reexec
 sudo systemctl start gunicorn
