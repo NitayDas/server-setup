@@ -10,7 +10,7 @@ pip install gunicorn
 
 ## 2.BInd with project
 ```
-gunicorn mysite.wsgi:application --bind 0.0.0.0:8000
+gunicorn abdulgafur_backend.wsgi:application --bind 0.0.0.0:8012
 ```
 
 # 3.Open the gunicorn file
