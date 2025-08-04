@@ -56,6 +56,7 @@ sudo nano /etc/nginx/conf.d/natunhat.conf
 
 ```
 server {
+ client_max_body_size 30M;
  listen 80;
  root //home/natunhat_college/natunhatcollege_frontend/dist;
  index index.html index.nginx-debian.html;
