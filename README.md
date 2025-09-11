@@ -13,7 +13,7 @@ tar -czvf folder_name.tar.gz folder_name
 ## command in New server
 ### 2. transfer from older server to the new server
 ```
-scp /home/laxmipur/folder_name.tar.gz /home
+scp -r root@OLD_VPS_IP:/home/folder_name.tar.gz /home
 
 ```
 ### 3 unzip the folder
