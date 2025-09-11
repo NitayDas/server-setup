@@ -26,6 +26,48 @@ rm -rf folder_name.tar.gz
 ```
 
 
+## Postgresql setup
+
+### 1. backup the databse
+
+```
+pg_dump -U db_user -h localhost db_name > utshab_backup.sql
+```
+
+### 2. zip the database
+```
+gzip utshab_backup.sql
+
+```
+
+### 3. transfer from loder server to new server (command in new server)
+```
+scp -r root@86.48.3.219:/home/utshab_backup.sql.gz /home/utshab
+```
+
+### 4. unzip the sql file:
+```
+gunzip utshab_backup.sql.gz
+```
+
+### 5. switch to postgresql 
+```
+sudo -i -u postgres
+```
+### 6. create new postgresql
+```
+CREATE DATABASE utshab_db;
+CREATE USER utshab_user WITH PASSWORD 'your_password';
+GRANT ALL PRIVILEGES ON DATABASE utshab_db TO utshab_user;
+```
+### 7. Restore the backup
+```
+psql -U utshab_user -d utshab_db -f /home/utshab/utshab_backup.sql
+```
+
+
+
+
 # Gunicorn Setup
 
 ## 1.Insatll gunicorn
