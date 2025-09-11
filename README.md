@@ -3,24 +3,24 @@
 ## Transfer from one server to another
 
 
-# command in old server terminal
-## 1. First zip the folder in the old server
+## command in old server terminal
+### 1. First zip the folder in the old server
 ```
 tar -czvf folder_name.tar.gz folder_name 
 
 ```
 
-# command in New server
-## 2. transfer from older server to the new server
+## command in New server
+### 2. transfer from older server to the new server
 ```
 scp /home/laxmipur/folder_name.tar.gz /home
 
 ```
-## 3 unzip the folder
+### 3 unzip the folder
 ```
 tar -xzvf folder_name.tar.gz
 ```
-## 4. Deleter the Zip
+### 4. Deleter the Zip
 ```
 rm -rf folder_name.tar.gz
 ```
