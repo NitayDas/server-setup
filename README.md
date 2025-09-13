@@ -62,7 +62,7 @@ GRANT ALL PRIVILEGES ON DATABASE utshab_db TO utshab_user;
 ```
 ### 7. Restore the backup
 ```
-psql -U utshab_user -d utshab_db -f /home/utshab/utshab_backup.sql
+PGPASSWORD="utshab" psql -h localhost -U utshab_user -d utshab_db -f /home/utshab/utshab_backup.sql
 ```
 
 
