@@ -31,7 +31,7 @@ rm -rf folder_name.tar.gz
 ### 1. backup the databse
 
 ```
-pg_dump -U db_user -h localhost db_name > utshab_backup.sql
+PGPASSWORD="utshab" pg_dump -h localhost -U utshab utshab > utshab_backup.sql
 ```
 
 ### 2. zip the database
