@@ -59,6 +59,7 @@ sudo -u postgres psql
 CREATE DATABASE utshab_db;
 CREATE USER utshab_user WITH PASSWORD 'your_password';
 GRANT ALL PRIVILEGES ON DATABASE utshab_db TO utshab_user;
+ALTER DATABASE db OWNER TO user;
 ```
 ### 7. Restore the backup
 do it before migrations
