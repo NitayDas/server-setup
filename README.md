@@ -52,7 +52,7 @@ gunzip utshab_backup.sql.gz
 
 ### 5. switch to postgresql 
 ```
-sudo -i -u postgres
+sudo -u postgres psql
 ```
 ### 6. create new postgresql
 ```
