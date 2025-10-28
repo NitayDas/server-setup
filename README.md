@@ -31,7 +31,7 @@ rm -rf folder_name.tar.gz
 ### 1. backup the databse
 
 ```
-PGPASSWORD="utshab" pg_dump -h localhost -U utshab utshab > utshab_backup.sql
+PGPASSWORD="db_password" pg_dump -h localhost -U db_user db_table > backup.sql
 ```
 
 ### 2. zip the database
@@ -56,15 +56,15 @@ sudo -u postgres psql
 ```
 ### 6. create new postgresql
 ```
-CREATE DATABASE utshab_db;
-CREATE USER utshab_user WITH PASSWORD 'your_password';
-GRANT ALL PRIVILEGES ON DATABASE utshab_db TO utshab_user;
-ALTER DATABASE db OWNER TO user;
+CREATE DATABASE db_table;
+CREATE USER db_user WITH PASSWORD 'db_password';
+GRANT ALL PRIVILEGES ON DATABASE db_table TO db_user;
+ALTER DATABASE db_table OWNER TO db_user;
 ```
 ### 7. Restore the backup
 do it before migrations
 ```
-PGPASSWORD="utshab" psql -h localhost -U utshab_user -d utshab_db -f /home/utshab/utshab_backup.sql
+PGPASSWORD="db_password" psql -h localhost -U db_user -d db_table -f /home/project_dir/backup.sql
 ```
 
 
